@@ -11,3 +11,9 @@ sast:
   stage: test
 include:
 - template: Security/SAST.gitlab-ci.yml
+- template: Code-Quality.gitlab-ci.yml
+
+code_quality:
+  stage: test
+  artifacts:
+    paths: [gl-code-quality-report.json]
