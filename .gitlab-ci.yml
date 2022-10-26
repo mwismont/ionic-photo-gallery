@@ -8,7 +8,7 @@
 image: node
 
 stages:
-- lint
+#- lint
 - test
 sast:
   stage: test
@@ -22,12 +22,12 @@ code_quality:
   artifacts:
     paths: [gl-code-quality-report.json]
 
-eslint:
- stage: lint
- artifacts:
-    paths: [gl-es-lint-report.json]
- script:
-    - npm ci
-    - npx eslint --format gitlab .
+#eslint:
+# stage: lint
+# artifacts:
+#    paths: [gl-es-lint-report.json]
+# script:
+#    - npm ci
+#    - npx eslint --format gitlab .
  
     
