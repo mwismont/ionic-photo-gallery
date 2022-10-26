@@ -21,13 +21,14 @@ code_quality:
   stage: test
   artifacts:
     paths: [gl-code-quality-report.json]
-# Lets name our Job eslint, because that's what it's doing.
+
 eslint:
  stage: lint
+ artifacts:
+    paths:
+      - "gl-es-lint-report.json"
  script:
     - npm ci
     - npx eslint --format gitlab .
-  artifacts:
-    reports:
-      codequality: gl-codequality.json
+ 
     
