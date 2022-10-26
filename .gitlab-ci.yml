@@ -23,11 +23,11 @@ code_quality:
     paths: [gl-code-quality-report.json]
 # Lets name our Job eslint, because that's what it's doing.
 eslint:
- # tell eslint what stage it is. (This could also be build or test for example)
  stage: lint
- # What scripts do we want to run?
  script:
-    # install eslint
-    - npm i eslint
-    # Run eslint
-    - node_modules/eslint/bin/eslint.js .
+    - npm ci
+    - npx eslint --format gitlab .
+  artifacts:
+    reports:
+      codequality: gl-codequality.json
+    
