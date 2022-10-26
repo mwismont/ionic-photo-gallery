@@ -1,0 +1,3 @@
+sonar.projectKey=ionic-photo-gallery
+
+sonar.typescript.tsconfigPath=tsconfig.app.json
