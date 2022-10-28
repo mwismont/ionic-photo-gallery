@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class Tab3Page {
 
   constructor() {
-    this.test;
+    this.test();
     let x = 10;
     if (x === x) {
         x = 20;
