@@ -17,7 +17,10 @@ pipelines:
         - step:
             name: Code linting
             script:
-              - npm install eslint
-              - npx eslint .
+              - npm install eslint@8.10.0
+              - npm install @microsoft/eslint-formatter-sarif@2.1.7
+              - npx eslint . --config .eslintrc.json --ext .js,.jsx,.ts,.tsx --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
             caches:
               - node
+            artifacts: 
+              - eslint-results.sarif
