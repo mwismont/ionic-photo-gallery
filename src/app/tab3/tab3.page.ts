@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor() {
+    let x = 10;
+    if (x === x) {
+        x = 20;
+    }
+  }
 
 }
