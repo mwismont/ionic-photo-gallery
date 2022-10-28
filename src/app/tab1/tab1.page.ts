@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor() {
+    let x = 1;
+    if (x === 0) {
+      debugger;
+      console.log("here");
+    }
+  }
 
 }
