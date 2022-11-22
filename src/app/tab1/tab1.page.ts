@@ -13,6 +13,15 @@ export class Tab1Page {
       debugger;
       console.log("here");
     }
+    const password = 'test';
+    const apiKey = 'abc123';
+    console.log('API Key: ' + apiKey);
+
+    this.login('mike', password);
+
   }
 
+  login(username: string, password: string) {
+    console.log('login: ' + username + '. pwd: ' + password);
+  }
 }
