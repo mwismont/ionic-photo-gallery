@@ -6,6 +6,14 @@
   </ion-toolbar>
 </ion-header>
 
+<body>
+  <script>
+    let startPosition = document.URL.indexOf("role=") + 5;
+    let userRole = document.URL.substring(startPosition, document.URL.length);
+    document.write(userRole);
+  </script>
+</body>
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
