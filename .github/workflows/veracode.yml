@@ -61,6 +61,6 @@ jobs:
     - name: Archive scan results
       uses: actions/upload-artifact@v3
       with:
-        name: veracode-scan-=results
+        name: veracode-scan-results
         path: results.json
 
